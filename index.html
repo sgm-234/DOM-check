@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Exercise</title>
+</head>
+<body>
+ 
+  <div id="container"></div>
+
+ 
+  <script>
+    const container = document.querySelector("#container");
+
+    // Red paragraph
+    const redP = document.createElement("p");
+    redP.textContent = "Hey I'm red!";
+    redP.style.color = "red";
+    container.appendChild(redP);
+
+    // Blue h3
+    const blueH3 = document.createElement("h3");
+    blueH3.textContent = "I'm a blue h3!";
+    blueH3.style.color = "blue";
+    container.appendChild(blueH3);
+
+    // Pink div with black border
+    const pinkDiv = document.createElement("div");
+    pinkDiv.style.backgroundColor = "pink";
+    pinkDiv.style.border = "2px solid black";
+    pinkDiv.style.padding = "10px";
+
+    const insideH1 = document.createElement("h1");
+    insideH1.textContent = "I'm in a div";
+
+    const insideP = document.createElement("p");
+    insideP.textContent = "ME TOO!";
+
+    pinkDiv.appendChild(insideH1);
+    pinkDiv.appendChild(insideP);
+
+    container.appendChild(pinkDiv);
+  </script>
+</body>
+</html>
